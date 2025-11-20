@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import { useStore } from '@/store/useStore';
 import { cateringItems, categories } from '@/data/items';
 import { Item } from '@/store/useStore';
 
-export default function CateringPage() {
+function CateringContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
   const [selectedCategory, setSelectedCategory] = useState(categoryParam || 'All');
@@ -114,6 +114,23 @@ export default function CateringPage() {
         </Link>
       </div>
     </div>
+  );
+}
+
+export default function CateringPage() {
+  return (
+    <Suspense fallback={
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold text-center mb-4 text-gray-800">
+          Our Catering Menu
+        </h1>
+        <p className="text-center text-gray-600 mb-8">
+          Loading...
+        </p>
+      </div>
+    }>
+      <CateringContent />
+    </Suspense>
   );
 }
 
