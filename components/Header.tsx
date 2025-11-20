@@ -18,9 +18,9 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-[#d2ae6d]">
-            A-Catters
+            Savii-The New Fest
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-gray-700 hover:text-[#d2ae6d] transition">
@@ -32,8 +32,8 @@ export default function Header() {
             <Link href="/dj-sound" className="text-gray-700 hover:text-[#d2ae6d] transition">
               DJ & Sound
             </Link>
-            <Link 
-              href="/selected-items" 
+            <Link
+              href="/selected-items"
               className="relative text-gray-700 hover:text-[#d2ae6d] transition"
             >
               Selected Items
@@ -53,8 +53,8 @@ export default function Header() {
 
           {/* Mobile: Cart Icon and Hamburger */}
           <div className="md:hidden flex items-center gap-4">
-            <Link 
-              href="/selected-items" 
+            <Link
+              href="/selected-items"
               className="relative text-gray-700"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export default function Header() {
                 </span>
               )}
             </Link>
-            
+
             {/* Hamburger Menu Button */}
             <button
               onClick={toggleMenu}
@@ -90,43 +90,43 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t pt-4 animate-fadeIn">
             <div className="flex flex-col space-y-3">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="text-gray-700 hover:text-[#d2ae6d] transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
-              <Link 
-                href="/catering" 
+              <Link
+                href="/catering"
                 className="text-gray-700 hover:text-[#d2ae6d] transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Catering
               </Link>
-              <Link 
-                href="/dj-sound" 
+              <Link
+                href="/dj-sound"
                 className="text-gray-700 hover:text-[#d2ae6d] transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 DJ & Sound
               </Link>
-              <Link 
-                href="/selected-items" 
+              <Link
+                href="/selected-items"
                 className="text-gray-700 hover:text-[#d2ae6d] transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Selected Items
               </Link>
-              <Link 
-                href="/about" 
+              <Link
+                href="/about"
                 className="text-gray-700 hover:text-[#d2ae6d] transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="text-gray-700 hover:text-[#d2ae6d] transition py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
